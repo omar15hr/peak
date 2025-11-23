@@ -39,7 +39,7 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <button className="bg-[#18CD40] text-[#191715] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80">Conversemos</button>
+              <button className="text-white bg-linear-to-r from-[#026b60] to-[#04a18f] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80">Conversemos</button>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export function Navbar() {
               </Link>
             ))}
             <div className="px-3 pt-2">
-              <button className="w-full bg-[#18CD40] text-[#191715] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80" onClick={() => setIsMenuOpen(false)}>
+              <button className="text-white w-full bg-linear-to-r from-[#026b60] to-[#04a18f] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80" onClick={() => setIsMenuOpen(false)}>
                 Conversemos
               </button>
             </div>

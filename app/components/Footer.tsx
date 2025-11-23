@@ -4,37 +4,37 @@ import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "./Icons";
 
 export function Footer() {
   return (
-    <footer className="relative w-full min-h-[800px] flex flex-col justify-end overflow-hidden">
+    <footer className="relative w-full min-h-[600px] md:min-h-[800px] flex flex-col justify-end overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/footer-img.webp"
           alt="Landscape with mountain and trees"
           fill
-          className="object-fill"
+          className="object-cover md:object-fill"
           priority
+          sizes="100vw"
         />
-        {/* Subtle gradient to ensure text readability at the very bottom */}
-        <div className="absolute inset-0 from-black/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pb-8 pt-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 pb-8 pt-12 md:pt-20">
+        <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between gap-8 md:gap-4 mb-12 md:mb-16">
           {/* Logo */}
-          <div className="text-white text-3xl font-black tracking-tighter uppercase">
+          <div className="text-white text-2xl sm:text-3xl font-black tracking-tighter uppercase mb-4 md:mb-0">
             PEAK
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-8 text-white/90 text-sm font-medium">
-            <Link href="#" className="hover:text-white transition-colors">
+          <nav className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 md:gap-8 text-white/90 text-sm sm:text-base font-medium mb-6 md:mb-0">
+            <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
               Contacto
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
               Preguntas Frecuentes
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
               Politicas
             </Link>
           </nav>
@@ -46,27 +46,27 @@ export function Footer() {
               className="text-white hover:text-white/80 transition-colors"
               aria-label="Facebook"
             >
-              <FacebookIcon className="w-5 h-5" />
+              <FacebookIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </Link>
             <Link
               href="#"
               className="text-white hover:text-white/80 transition-colors"
               aria-label="Instagram"
             >
-              <InstagramIcon className="w-5 h-5" />
+              <InstagramIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </Link>
             <Link
               href="#"
               className="text-white hover:text-white/80 transition-colors"
               aria-label="WhatsApp"
             >
-              <WhatsAppIcon className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </Link>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-white/70 text-[10px] md:text-xs font-medium tracking-wide">
+        <div className="text-center text-white/70 text-xs sm:text-sm font-medium tracking-wide px-4">
           Copyright © 2025 PEAK STUDIO - Todos los derechos reservados
         </div>
       </div>
