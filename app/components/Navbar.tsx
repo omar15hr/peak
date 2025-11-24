@@ -20,14 +20,12 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <div>
             <Link href="/" className="text-xl font-bold text-foreground">
               PEAK
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center gap-12">
               {navLinks.map((link) => (
@@ -39,23 +37,26 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <button className="text-white bg-linear-to-r from-[#026b60] to-[#04a18f] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80">Conversemos</button>
+              <button className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80">
+                Conversemos
+              </button>
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex gap-6">
             <button
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
+              className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80"
+              onClick={() => setIsMenuOpen(false)}
             >
+              Conversemos
+            </button>
+            <button onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
@@ -69,11 +70,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="px-3 pt-2">
-              <button className="text-white w-full bg-linear-to-r from-[#026b60] to-[#04a18f] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80" onClick={() => setIsMenuOpen(false)}>
-                Conversemos
-              </button>
-            </div>
           </div>
         </div>
       )}
