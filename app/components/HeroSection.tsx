@@ -12,7 +12,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute top-10 right-6 md:right-16 lg:right-2 w-100 md:w-80 lg:w-180 z-10 pointer-events-none"
+          className="absolute top-10 right-2 md:right-16 lg:right-2 w-100 md:w-80 lg:w-180 z-10 pointer-events-none"
         >
           <Image
             src="/hero-section-img.webp"

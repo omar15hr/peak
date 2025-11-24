@@ -1,4 +1,4 @@
-import Pricing from "@/app/components/Pricing";
+import ProjectsGrid from "@/app/components/ProjectsGrid";
 
 export default function Portafolio() {
   return (
@@ -11,7 +11,7 @@ export default function Portafolio() {
           En cada proyecto buscamos precisión, intención y resultados. Sitios web diseñados estratégicamente para comunicar mejor, escalar y diferenciarse en un entorno cada vez más competitivo.
         </p>
       </div>
-      <Pricing />
+      <ProjectsGrid />
     </section>
   );
 }
