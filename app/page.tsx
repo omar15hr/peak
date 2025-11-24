@@ -51,6 +51,55 @@ export default function Home() {
     },
   ];
 
+  const items = [
+    {
+      img: "/pc-img.webp",
+      title: "70%",
+      desc: "de los consumidores creen que una empresa sin sitio web es menos confiable.",
+    },
+    {
+      img: "/clock-img.webp",
+      title: "0.05 segundos",
+      desc: "Toma que alguien forme una impresión de tu web. Sí, menos que un parpadeo.",
+    },
+    {
+      img: "/money-img.webp",
+      title: "3X más ventas",
+      desc: "cuando un sitio está optimizado para conversión.",
+    },
+    {
+      img: "/calendar-img.webp",
+      title: "1er lugar",
+      desc: "en impacto digital: un sitio web profesional supera siempre a redes sociales.",
+    },
+    {
+      img: "/screen-img.webp",
+      title: "+75%",
+      desc: "de los usuarios juzgan la credibilidad de un negocio por su sitio web.",
+    },
+    {
+      img: "/phone-img.webp",
+      title: "88%",
+      desc: "de las personas no vuelven a un sitio después de una mala experiencia.",
+    },
+  ];
+
+  const projects = [
+    {
+      id: 1,
+      img: "/pag-dogleader.webp",
+      name: "Dogleader",
+      logo: "/dogleader.webp",
+    },
+    {
+      id: 2,
+      img: "/pag-fluxor.webp",
+      name: "Fluxor",
+      logo: "/fluxor-logo.webp",
+    },
+    { id: 3, img: "/pag-fortius.webp", name: "Fortius", logo: "/fortius.webp" },
+  ];
+
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
       <section className="w-full max-w-7xl py-20 mx-auto px-4 sm:px-6">
@@ -135,9 +184,7 @@ export default function Home() {
               Nos adaptamos a lo que necesitas
             </h3>
             <div className="mt-3 max-w-xl text-[#71717A]">
-              <p>
-                Revisa los planes que tenemos para ti.
-              </p>
+              <p>Revisa los planes que tenemos para ti.</p>
             </div>
           </div>
           <div className="mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
@@ -145,7 +192,9 @@ export default function Home() {
               <div
                 key={idx}
                 className={`relative shadow-md flex-1 flex items-stretch flex-col rounded-xl mt-6 sm:mt-0 ${
-                  item.isMostPop ? "mt-10 bg-[#191715] text-white" : "bg-[#F9F8F6]"
+                  item.isMostPop
+                    ? "mt-10 bg-[#191715] text-white"
+                    : "bg-[#F9F8F6]"
                 }`}
               >
                 {item.isMostPop ? (
@@ -184,6 +233,129 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="w-full bg-[#191715] py-20 px-4 flex items-center justify-center">
+        <div className="relative w-full max-w-4xl text-center">
+          <div className="flex justify-center mb-6 -mt-10 md:-mt-14">
+            <Image
+              src="/cta-image.webp"
+              alt="Growth"
+              className="w-[320px] max-w-full drop-shadow-xl"
+              width={500}
+              height={500}
+            />
+          </div>
+
+          <div className="px-6 py-6 flex flex-col gap-2">
+            <h1 className="text-5xl sm:text-4xl font-bold text-white mb-4">
+              Diseño web estratégico, sólido y medible.
+            </h1>
+
+            <p className="text-white font-semibold mb-2 text-2xl sm:text-xl">
+              Tu presencia digital debe escalar.
+            </p>
+
+            <p className="text-gray-300 max-w-xl mx-auto leading-relaxed text-xl sm:text-lg">
+              Diseñamos sitios que evolucionan, crecen y te acompañan hasta la
+              cima: el Peak de tu rendimiento online.
+            </p>
+
+            <button className="mx-auto mt-8 px-6 py-2 bg-white text-black rounded-lg shadow-md hover:shadow-lg transition font-semibold cursor-pointer hover:bg-[#18CD40] hover:text-white">
+              Conversemos
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-20 px-4 bg-white flex flex-col items-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12">
+          No es un gasto.{" "}
+          <span className="text-[#18CD40]">Es una inversión</span>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className="bg-linear-to-r from-[#FFFFFF] to-[#F9F8F6] border border-gray-200 rounded-xl p-8 flex flex-col shadow-sm hover:shadow-md transition"
+            >
+              <Image
+                src={item.img}
+                alt={item.title}
+                className="w-40 mx-auto mb-6"
+                width={500}
+                height={500}
+              />
+              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <p className="text-[#666464] text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="w-full py-20 px-4 flex flex-col items-center bg-white">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-2">
+          Descubre lo que somos capaces de hacer
+        </h2>
+        <p className="font-semibold text-gray-700 text-center">Portafolio</p>
+        <p className="text-gray-500 text-center mb-12 max-w-xl">
+          Algunas marcas que hemos llevado a la cima de su industria.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full max-w-6xl">
+          {projects.map((item, i) => (
+            <div key={i} className="flex flex-col">
+              <div className="w-full overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+                <Image
+                  width={500}
+                  height={500}
+                  src={item.img}
+                  alt="Proyecto"
+                  className="w-full object-cover"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 mt-4">
+                <Image
+                  width={500}
+                  height={500}
+                  src={item.logo}
+                  alt="Marca"
+                  className="w-10 h-10 object-contain"
+                />
+                <p className="font-semibold text-gray-800">{item.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button className="mt-14 px-6 py-2 border border-[#18CD40] text-[#18CD40] rounded-lg hover:bg-[#18CD40]/80 transition font-medium cursor-pointer hover:text-white">
+          Ver todos los proyectos
+        </button>
+      </section>
+
+      <section className="w-full py-20 px-4 flex flex-col items-center bg-white">
+        <h2 className="text-4xl sm:text-4xl font-extrabold text-center mb-6">
+          Donde las marcas encuentran su rumbo
+        </h2>
+        <p className="font-semibold text-gray-700 mb-6 text-center text-xl">
+          Hoy, quien no se muestra, no existe.
+        </p>
+        <p className="text-gray-500 text-center mb-6 max-w-3xl text-xl">
+          Y quien se muestra sin intención, se pierde.
+        </p>
+        <p className="text-gray-500 text-center mb-6 max-w-4xl text-xl">
+          En Seeker, transformamos sitios web en brújulas: herramientas que
+          guían, elevan y abren camino.
+        </p>
+        <p className="text-gray-500 text-center max-w-4xl text-xl">
+          Creamos espacios digitales donde tu marca no solo aparece, sino que se
+          afirma, respira y crece. Porque cuando tu web tiene dirección, tu
+          negocio también.
+        </p>
       </section>
     </main>
   );
