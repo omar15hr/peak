@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function ProjectsGrid() {
@@ -19,17 +22,46 @@ export default function ProjectsGrid() {
 
   return (
     <section className="w-full py-20 px-4 flex flex-col items-center bg-white">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-2">
+      <motion.h2
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl font-extrabold text-center mb-2"
+      >
         Descubre lo que somos capaces de hacer
-      </h2>
-      <p className="font-semibold text-gray-700 text-center">Portafolio</p>
-      <p className="text-gray-500 text-center mb-12 max-w-xl">
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        viewport={{ once: true }}
+        className="font-semibold text-gray-700 text-center"
+      >
+        Portafolio
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-gray-500 text-center mb-12 max-w-xl"
+      >
         Algunas marcas que hemos llevado a la cima de su industria.
-      </p>
+      </motion.p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 w-full max-w-6xl">
         {projects.map((item, i) => (
-          <div key={i} className="flex flex-col">
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, scale: 0.95, y: 25 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut", delay: i * 0.12 }}
+            viewport={{ once: true }}
+            className="flex flex-col"
+          >
             <div className="w-full overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
               <Image
                 width={500}
@@ -50,13 +82,19 @@ export default function ProjectsGrid() {
               />
               <p className="font-semibold text-gray-800">{item.name}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      <button className="mt-14 px-6 py-2 border border-[#18CD40] text-[#18CD40] rounded-lg hover:bg-[#18CD40]/80 transition font-medium cursor-pointer hover:text-white">
+      <motion.button
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-14 px-6 py-2 border border-[#18CD40] text-[#18CD40] rounded-lg hover:bg-[#18CD40]/80 transition font-medium cursor-pointer hover:text-white"
+      >
         Ver todos los proyectos
-      </button>
+      </motion.button>
     </section>
   );
 }

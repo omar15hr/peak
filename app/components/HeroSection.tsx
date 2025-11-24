@@ -17,7 +17,7 @@ export default function HeroSection() {
           <Image
             src="/hero-section-img.webp"
             alt="Digital Business Illustration"
-            className="w-full h-auto object-contain drop-shadow-2xl absolute top-90 right-2 md:top-0 md:right-0"
+            className="w-full h-auto object-contain drop-shadow-2xl absolute top-100 right-2 md:top-0 md:right-0"
             width={500}
             height={500}
             priority
