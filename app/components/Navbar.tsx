@@ -11,13 +11,12 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Inicio" },
-    { href: "/about", label: "Planes" },
-    { href: "/services", label: "Portafolio" },
-    { href: "/contact", label: "Nosotros" },
+    { href: "/planes", label: "Planes" },
+    { href: "/portafolio", label: "Portafolio" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full">
+    <nav className="top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div>
