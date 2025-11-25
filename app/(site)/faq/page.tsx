@@ -1,3 +1,5 @@
+import FaqsCard from "@/app/components/FaqsCard";
+
 export default function FAQ() {
   const faqsList = [
     {
@@ -18,7 +20,7 @@ export default function FAQ() {
     },
     {
       q: "¿Cuando se hace el pago del plan?",
-      a: "Al cliente aprobar la propuesta y presupuesto del plan, se debe pagar y apartir de alli cuenta el tiempo de entrega.",
+      a: "Al cliente aprobar la propuesta y presupuesto del plan, se debe pagar y apartir de allí cuenta el tiempo de entrega.",
     },
     {
       q: "¿El diseño es personalizado o utilizan plantillas?",
@@ -27,34 +29,20 @@ export default function FAQ() {
   ];
 
   return (
-    <section>
-      <div className="leading-relaxed mt-12 mx-4 md:mx-8">
-        <div className="text-center space-y-3">
-          <h1 className="block text-gray-800 text-3xl font-semibold">
-            Preguntas Frecuentes
-          </h1>
-          <p className="text-gray-500 max-w-lg mx-auto">
-            Encuentra aquí las respuestas a las dudas más comunes sobre nuestros
-            planes, procesos y servicios. Si no encuentras lo que buscabas,
-            contáctanos.
-          </p>
-        </div>
-        <div
-          className="relative bg-white rounded-md mt-10 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl sm:mx-auto"
-          style={{ boxShadow: "0px 7px 20px 7px #F1F1F1" }}
-        >
-          <div className="grid gap-4 py-8 md:grid-cols-2">
-            {faqsList.map((item, idx) => (
-              <div className="space-y-3 mt-6 px-8" key={idx}>
-                <h4 className="text-gray-800 text-xl font-semibold ">
-                  {item.q}
-                </h4>
-                <p className="text-gray-500">{item.a}</p>
-              </div>
-            ))}
-          </div>
-          <span className="w-0.5 h-full bg-gray-200 m-auto absolute top-0 left-0 right-0 hidden md:block"></span>
-        </div>
+    <section className="leading-relaxed max-w-7xl mt-12 mx-auto px-4 md:px-8">
+      <div className="w-full py-20 px-4 flex flex-col max-w-7xl bg-white">
+        <h1 className="text-7xl sm:text-9xl font-extrabold text-start mb-6">
+          FAQs
+        </h1>
+        <p className="text-gray-500 text-start max-w-3xl text-xl">
+          Estas son nuestras preguntas más frecuentes. Si no encuentras alguna relacionada a tu pregunta, no dudes en contáctarnos.
+        </p>
+      </div>
+
+      <div className="mt-14 max-w-2xl mx-auto">
+        {faqsList.map((item, idx) => (
+          <FaqsCard key={idx} idx={idx} item={item} />
+        ))}
       </div>
     </section>
   );

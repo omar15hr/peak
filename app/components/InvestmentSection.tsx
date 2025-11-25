@@ -20,21 +20,6 @@ export default function InvestmentSection() {
       title: "3X más ventas",
       desc: "cuando un sitio está optimizado para conversión.",
     },
-    {
-      img: "/calendar-img.webp",
-      title: "1er lugar",
-      desc: "en impacto digital: un sitio web profesional supera siempre a redes sociales.",
-    },
-    {
-      img: "/screen-img.webp",
-      title: "+75%",
-      desc: "de los usuarios juzgan la credibilidad de un negocio por su sitio web.",
-    },
-    {
-      img: "/phone-img.webp",
-      title: "88%",
-      desc: "de las personas no vuelven a un sitio después de una mala experiencia.",
-    },
   ];
 
   return (
