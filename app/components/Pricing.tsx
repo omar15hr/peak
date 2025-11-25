@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CheckIcon } from "./Icons";
+import { AlertCircleIcon, CheckIcon } from "./Icons";
 
 export default function Pricing() {
   const plans = [
@@ -12,12 +12,10 @@ export default function Pricing() {
       isMostPop: false,
       features: [
         "Diseño responsive adaptado a todos los dispositivos.",
-        "Formulario de contacto con envío directo a correo electrónico (opcional)",
-        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
-        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
-        "Implementación en hosting.",
-        "Configuración de dominio.",
-        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
+        "Formulario de contacto (opcional)",
+        "Integración de enlaces a redes sociales.",
+        "Optimización básica de SEO.",
+        "Monitoreo y soporte básico por 1 meses.",
       ],
     },
     {
@@ -28,14 +26,10 @@ export default function Pricing() {
       features: [
         "Diseño responsive adaptado a todos los dispositivos.",
         "Hasta 5 secciones (ej: inicio, servicios, sobre nosotros, contacto, etc.).",
-        "Formulario de contacto con envío directo a correo electrónico (opcional)",
-        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
-        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
-        "Optimización SEO con indexación de página en Google.",
-        "Optimización de rendimiento.",
-        "Implementación en hosting.",
-        "Configuración de dominio.",
-        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
+        "Formulario de contacto (opcional)",
+        "Integración de enlaces a redes sociales.",
+        "Optimización básica de SEO.",
+        "Monitoreo y soporte básico por 1 meses.",
       ],
     },
     {
@@ -44,19 +38,12 @@ export default function Pricing() {
       price: 60,
       isMostPop: false,
       features: [
-        "Diseño responsive adaptado a todos los dispositivos.",
         "Hasta 10 secciones (ej: inicio, catálogo, producto, carrito, checkout, contacto, etc.).",
         "Configuración de productos iniciales. Carrito de compras + checkout integrado.",
         "Integración con pasarela de pago.",
         "Gestión de stock básica.",
-        "Formulario de contacto con envío directo a correo electrónico (opcional)",
-        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
-        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
-        "Optimización SEO con indexación de página en Google.",
-        "Optimización de rendimiento.",
-        "Implementación en hosting.",
-        "Configuración de dominio.",
-        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
+        "Optimización básica de SEO.",
+        "Monitoreo y soporte básico por 1 meses.",
       ],
     },
   ];
@@ -129,10 +116,6 @@ export default function Pricing() {
                 >
                   Empecemos con tu proyecto
                 </motion.button>
-
-                <span className="text-sm">
-                 El servicio no incluye dominio ni hosting. Estos deben ser adquiridos por el cliente, pero nosotros nos encargamos de configurarlos y conectarlos sin costo adicional.
-                </span>
               </div>
 
               <motion.ul
@@ -166,6 +149,22 @@ export default function Pricing() {
               </motion.ul>
             </motion.div>
           ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 text-center bg-[#F5F5F5] py-4 mt-10 rounded-lg shadow-sm">
+        <div className="flex gap-4">
+          <div className="flex items-start justify-start gap-2">
+            <AlertCircleIcon />
+          </div>
+          <div className="flex flex-col justify-start">
+            <span className="font-bold self-start">Importante</span>
+            <span className="text-sm text-gray-500">
+              El servicio no incluye dominio ni hosting. Estos deben ser
+              adquiridos por el cliente, pero nosotros nos encargamos de
+              configurarlos y conectarlos sin costo adicional.
+            </span>
+          </div>
         </div>
       </div>
     </section>

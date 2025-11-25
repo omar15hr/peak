@@ -12,7 +12,7 @@ export default function Home() {
       <DiagnosisSection />
       <Pricing />
 
-      <section className="w-full bg-[#191715] py-20 px-4 flex items-center justify-center">
+      <section className="w-full bg-[#191715] py-20 px-4 flex items-center justify-center mt-10">
         <div className="relative w-full max-w-4xl text-center">
           <div className="flex justify-center mb-6 -mt-10 md:-mt-14">
             <Image
