@@ -6,48 +6,57 @@ import { CheckIcon } from "./Icons";
 export default function Pricing() {
   const plans = [
     {
-      name: "Quick Templates",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      name: "Single Page Website",
+      desc: "Sitio de una sola página, rápido y directo, ideal para presentar tu marca, servicios o un producto sin necesidad de navegación compleja.",
       price: 12,
       isMostPop: false,
       features: [
-        "Curabitur faucibus",
-        "massa ut pretium maximus",
-        "Sed posuere nisi",
-        "Pellentesque eu nibh et neque",
-        "Suspendisse a leo",
-        "Praesent quis venenatis ipsum",
-        "Duis non diam vel tortor",
+        "Diseño responsive adaptado a todos los dispositivos.",
+        "Formulario de contacto con envío directo a correo electrónico (opcional)",
+        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
+        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
+        "Implementación en hosting.",
+        "Configuración de dominio.",
+        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
       ],
     },
     {
-      name: "Solución a la medida",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      name: "Multi-page Static Website",
+      desc: "Sitio estructurado con varias secciones independientes (Inicio, Servicios, Contacto, etc.), pensado para proyectos que necesitan más contenido y mejor organización.",
       price: 35,
       isMostPop: true,
       features: [
-        "Curabitur faucibus",
-        "massa ut pretium maximus",
-        "Sed posuere nisi",
-        "Pellentesque eu nibh et neque",
-        "Suspendisse a leo",
-        "Praesent quis venenatis ipsum",
-        "Duis non diam vel tortor",
+        "Diseño responsive adaptado a todos los dispositivos.",
+        "Hasta 5 secciones (ej: inicio, servicios, sobre nosotros, contacto, etc.).",
+        "Formulario de contacto con envío directo a correo electrónico (opcional)",
+        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
+        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
+        "Optimización SEO con indexación de página en Google.",
+        "Optimización de rendimiento.",
+        "Implementación en hosting.",
+        "Configuración de dominio.",
+        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
       ],
     },
     {
-      name: "Shopify Templates",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      name: "E-commerce/Web Personalizada",
+      desc: "Tienda online o plataforma a medida con funcionalidades avanzadas: catálogo, carrito, pagos, panel de gestión y desarrollo personalizado según tus necesidades.",
       price: 60,
       isMostPop: false,
       features: [
-        "Curabitur faucibus",
-        "massa ut pretium maximus",
-        "Sed posuere nisi",
-        "Pellentesque eu nibh et neque",
-        "Suspendisse a leo",
-        "Praesent quis venenatis ipsum",
-        "Duis non diam vel tortor",
+        "Diseño responsive adaptado a todos los dispositivos.",
+        "Hasta 10 secciones (ej: inicio, catálogo, producto, carrito, checkout, contacto, etc.).",
+        "Configuración de productos iniciales. Carrito de compras + checkout integrado.",
+        "Integración con pasarela de pago.",
+        "Gestión de stock básica.",
+        "Formulario de contacto con envío directo a correo electrónico (opcional)",
+        "Integración de enlaces a redes sociales:WhatsApp, Instagram, X, Linkedin, etc.",
+        "Optimización básica de SEO on-page (títulos, descripciones y etiquetas en imágenes).",
+        "Optimización SEO con indexación de página en Google.",
+        "Optimización de rendimiento.",
+        "Implementación en hosting.",
+        "Configuración de dominio.",
+        "Monitoreo y soporte básico por 1 meses (Actualización de dependencias y plugins, corrección de errores y ajustes básicos). No incluye cambio en el diseño.",
       ],
     },
   ];
@@ -96,7 +105,7 @@ export default function Pricing() {
                   viewport={{ once: true }}
                   className="w-full absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-md shadow-md bg-linear-to-br from-[#18CD40] to-[#191715] text-center text-white text-sm font-semibold"
                 >
-                  Recomendado
+                  Más popular
                 </motion.span>
               )}
 
@@ -120,6 +129,12 @@ export default function Pricing() {
                 >
                   Empecemos con tu proyecto
                 </motion.button>
+
+                <span className="text-sm">
+                  El precio no incluye dominio ni hosting. Si no cuentas con
+                  ellos, nosotros realizamos toda la configuración y conexión
+                  sin costo adicional.
+                </span>
               </div>
 
               <motion.ul
