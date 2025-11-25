@@ -131,9 +131,7 @@ export default function Pricing() {
                 </motion.button>
 
                 <span className="text-sm">
-                  El precio no incluye dominio ni hosting. Si no cuentas con
-                  ellos, nosotros realizamos toda la configuración y conexión
-                  sin costo adicional.
+                 El servicio no incluye dominio ni hosting. Estos deben ser adquiridos por el cliente, pero nosotros nos encargamos de configurarlos y conectarlos sin costo adicional.
                 </span>
               </div>
 

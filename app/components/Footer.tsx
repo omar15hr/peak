@@ -27,7 +27,7 @@ export function Footer() {
             <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
               Contacto
             </Link>
-            <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
+            <Link href="/faq" className="hover:text-white transition-colors whitespace-nowrap">
               Preguntas Frecuentes
             </Link>
             <Link href="#" className="hover:text-white transition-colors whitespace-nowrap">
