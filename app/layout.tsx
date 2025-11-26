@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import FloatingForm from "./components/FloatingForm";
+import { FormProvider } from "./context/FormContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <Navbar />
-        {children}
-        <FloatingForm />
+        <FormProvider>
+          <Navbar />
+          {children}
+          <FloatingForm />
+        </FormProvider>
         <Footer />
       </body>
     </html>

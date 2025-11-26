@@ -53,17 +53,17 @@ export default function Home() {
         <h2 className="text-4xl sm:text-4xl font-extrabold text-center mb-6">
           Donde las marcas encuentran su rumbo
         </h2>
-        <p className="font-semibold text-gray-700 mb-6 text-center text-xl">
+        <p className="font-semibold text-gray-700 mb-6 text-center text-lg">
           Hoy, quien no se muestra, no existe.
         </p>
-        <p className="text-gray-500 text-center mb-6 max-w-3xl text-xl">
+        <p className="text-gray-500 text-center mb-6 max-w-3xl text-lg">
           Y quien se muestra sin intención, se pierde.
         </p>
-        <p className="text-gray-500 text-center mb-6 max-w-4xl text-xl">
-          En Seeker, transformamos sitios web en brújulas: herramientas que
+        <p className="text-gray-500 text-center mb-6 max-w-4xl text-lg">
+          En Peak, transformamos sitios web en brújulas: herramientas que
           guían, elevan y abren camino.
         </p>
-        <p className="text-gray-500 text-center max-w-4xl text-xl">
+        <p className="text-gray-500 text-center max-w-4xl text-lg">
           Creamos espacios digitales donde tu marca no solo aparece, sino que se
           afirma, respira y crece. Porque cuando tu web tiene dirección, tu
           negocio también.

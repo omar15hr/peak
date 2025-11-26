@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CloseIcon, MenuIcon } from "./Icons";
+import { useForm } from "../context/FormContext";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const { setOpen } = useForm();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 5);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "/", label: "Inicio" },
@@ -17,7 +29,11 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="top-0 z-50 w-full">
+    <nav className={`
+        sticky top-0 z-50 w-full bg-white p-2 
+        transition-shadow duration-300
+        ${scrolled ? "shadow-md" : "shadow-none"}
+      `}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div>
@@ -37,7 +53,10 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <button className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80">
+              <button
+                onClick={() => setOpen(true)}
+                className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80"
+              >
                 Conversemos
               </button>
             </div>
@@ -46,7 +65,7 @@ export function Navbar() {
           <div className="md:hidden flex gap-6">
             <button
               className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80"
-              onClick={() => setIsMenuOpen(false)}
+             onClick={() => setOpen(true)}
             >
               Conversemos
             </button>

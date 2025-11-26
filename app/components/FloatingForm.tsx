@@ -1,20 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useForm } from "../context/FormContext";
 import { CloseIcon } from "./Icons";
 
 export default function FloatingForm() {
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useForm();
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-[#04a18f] text-white px-5 py-3 rounded-full shadow-xl hover:bg-[#026b60] transition-all"
-      >
-        Contacto
-      </button>
-
       {open && (
         <div
           onClick={() => setOpen(false)}
