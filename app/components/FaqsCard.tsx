@@ -27,17 +27,17 @@ export default function FaqsCard({ item }: Props) {
   };
 
   return (
-    <div className="space-y-3 mt-5 overflow-hidden border-b">
+    <div className="space-y-3 overflow-hidden">
       <h4
-        className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium"
+        className="cursor-pointer pb-6 flex items-center justify-between text-2xl text-[#191715] font-bold border-b border-[#D9D9D9] pt-10"
         onClick={handleOpenAnswer}
       >
         {item.q}
 
         {open ? (
-          <ChevronUpIcon />
+          <span className="bg-[#F9F8F6] p-2 rounded-full"><ChevronUpIcon /></span>
         ) : (
-          <ChevronDownIcon />
+          <span className="bg-[#F9F8F6] p-2 rounded-full"><ChevronDownIcon /></span>
         )}
       </h4>
 
@@ -47,7 +47,7 @@ export default function FaqsCard({ item }: Props) {
         style={{ height: open ? answerH : "0px" }}
       >
         <div>
-          <p className="text-gray-500">{item.a}</p>
+          <p className="text-[#666464]">{item.a}</p>
         </div>
       </div>
     </div>

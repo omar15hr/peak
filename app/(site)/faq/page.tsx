@@ -39,7 +39,7 @@ export default function FAQ() {
         </p>
       </div>
 
-      <div className="mt-14 max-w-2xl mx-auto">
+      <div className="mt-5 max-w-5xl mx-auto">
         {faqsList.map((item, idx) => (
           <FaqsCard key={idx} idx={idx} item={item} />
         ))}
