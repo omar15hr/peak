@@ -6,17 +6,17 @@ import Image from "next/image";
 export default function InvestmentSection() {
   const items = [
     {
-      img: "/pc-img.webp",
+      img: "/pc-img.png",
       title: "70%",
       desc: "de los consumidores creen que una empresa sin sitio web es menos confiable.",
     },
     {
-      img: "/clock-img.webp",
+      img: "/clock-img.png",
       title: "0.05 segundos",
       desc: "Toma que alguien forme una impresión de tu web. Sí, menos que un parpadeo.",
     },
     {
-      img: "/money-img.webp",
+      img: "/money-img.png",
       title: "3X más ventas",
       desc: "cuando un sitio está optimizado para conversión.",
     },

@@ -15,7 +15,7 @@ export default function HeroSection() {
           className="absolute top-10 right-2 md:right-16 lg:right-2 w-100 md:w-80 lg:w-180 z-10 pointer-events-none"
         >
           <Image
-            src="/hero-section-img.webp"
+            src="/hero-section-img.png"
             alt="Digital Business Illustration"
             className="w-full h-auto object-contain drop-shadow-2xl absolute top-100 right-2 md:top-0 md:right-0"
             width={500}

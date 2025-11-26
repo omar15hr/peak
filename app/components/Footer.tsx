@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="relative w-full min-h-[600px] md:min-h-[800px] flex flex-col justify-end overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/footer-img.webp"
+          src="/footer-img.png"
           alt="Landscape with mountain and trees"
           fill
           className="object-cover md:object-fill"

@@ -16,7 +16,7 @@ export default function Home() {
         <div className="relative w-full max-w-4xl text-center">
           <div className="flex justify-center mb-6 -mt-10 md:-mt-14">
             <Image
-              src="/cta-image.webp"
+              src="/cta-image.png"
               alt="Growth"
               className="w-[320px] max-w-full drop-shadow-xl"
               width={500}
