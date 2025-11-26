@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { AlertCircleIcon, CheckIcon } from "./Icons";
+import { InfoIcon, CheckIcon } from "./Icons";
 
 export default function Pricing() {
   const plans = [
@@ -155,7 +155,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-4 text-center bg-[#F5F5F5] py-4 mt-10 rounded-lg shadow-sm">
         <div className="flex gap-4">
           <div className="flex items-start justify-start gap-2">
-            <AlertCircleIcon />
+            <InfoIcon />
           </div>
           <div className="flex flex-col justify-start">
             <span className="font-bold self-start">Importante</span>

@@ -25,7 +25,7 @@ export default function HeroSection() {
           />
         </motion.div>
 
-        <div className="bg-[#F9F8F6] h-150 md:h-100 rounded-3xl p-8 md:p-12 lg:p-12 pt-12 text-start md:pt-16 border border-gray-100 shadow-md">
+        <div className="bg-[#F9F8F6] h-150 md:h-100 rounded-3xl p-8 md:p-12 lg:p-12 pt-12 text-start md:pt-16 border border-[#D9D9D9]">
           <div className="max-w-2xl space-y-6">
             <motion.h1
               initial={{ opacity: 0, y: 25 }}
@@ -56,7 +56,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.35 }}
               className="pt-2 flex justify-center md:justify-start"
             >
-              <button className="group inline-flex items-center gap-2 px-6 py-2 rounded-xl border-2 border-[#18CD40] font-semibold text-[#18CD40] hover:bg-[#18CD40] hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-md cursor-pointer">
+              <button className="group inline-flex items-center gap-2 px-6 py-2 rounded-xl border-2 border-[#18CD40] font-semibold text-[#18CD40] hover:bg-[#18CD40] hover:text-white transition-all duration-300 ease-in-out  cursor-pointer">
                 <span>Agendar una llamada</span>
                 <VideoCallIcon />
               </button>
