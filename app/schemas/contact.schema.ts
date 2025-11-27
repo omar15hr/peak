@@ -3,31 +3,30 @@ import { z } from "zod";
 export const contactFormSchema = z.object({
   name: z
     .string()
-    .min(1, "Name is required")
-    .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be less than 100 characters")
-    .regex(/^[a-zA-Z\s\u00C0-\u017F'-]+$/, "Name contains invalid characters")
+    .min(1, "El nombre es requerido")
+    .min(2, "El nombre debe tener al menos 2 caracteres")
+    .max(50, "El nombre debe tener menos de 50 caracteres")
+    .regex(/^[a-zA-Z\s\u00C0-\u017F'-]+$/, "El nombre contiene caracteres inválidos")
     .transform((val) => val.trim()),
 
   email: z
     .string()
-    .min(1, "Email is required")
-    .email("Please enter a valid email address")
-    .max(30, "Email must be less than 254 characters")
+    .min(1, "El email es requerido")
+    .email("Por favor, ingresa un email válido")
+    .max(30, "El email debe tener menos de 30 caracteres")
     .toLowerCase()
     .transform((val) => val.trim()),
 
   phone: z
     .string()
-    .min(1, "Phone number is required")
-    .min(10, "Phone number must be at least 10 digits")
-    .max(20, "Phone number must be less than 20 characters")
-    .regex(/^[\d\s\-\+\(\)\.]+$/, "Phone number contains invalid characters")
-    .transform((val) => val.replace(/\s+/g, "")), // Remove spaces
-
+    .min(1, "El número de teléfono es requerido")
+    .min(10, "El número de teléfono debe tener al menos 10 dígitos")
+    .max(20, "El número de teléfono debe tener menos de 20 caracteres")
+    .regex(/^[\d\s\-\+\(\)\.]+$/, "El número de teléfono contiene caracteres inválidos")
+    .transform((val) => val.replace(/\s+/g, "")),
   reason: z
     .string()
-    .min(1, "Please select a reason for inquiry")
+    .min(1, "Por favor, selecciona un motivo")
     .refine(
       (val) => ["Residential", "Commercial", "Industrial", "Other"].includes(val),
       "Please select a valid reason"
