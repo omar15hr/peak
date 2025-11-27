@@ -10,7 +10,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const { setOpen } = useForm();
+  const { setOpen, open } = useForm();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +29,14 @@ export function Navbar() {
   ];
 
   return (
-    <nav className={`
-        sticky top-0 z-50 w-full bg-white p-2 
-        transition-shadow duration-300
-        ${scrolled ? "shadow-md" : "shadow-none"}
-      `}>
+    <nav
+      className={`
+    sticky top-0 z-50 w-full bg-white p-2 
+    transition-all duration-300
+    ${scrolled ? "shadow-md" : "shadow-none"}
+    ${open ? "opacity-0 pointer-events-none" : "opacity-100"}
+  `}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div>
@@ -65,7 +68,7 @@ export function Navbar() {
           <div className="md:hidden flex gap-6">
             <button
               className="bg-[#18CD40] p-2 font-bold rounded-lg px-4 text-sm cursor-pointer hover:bg-[#18CD40]/80"
-             onClick={() => setOpen(true)}
+              onClick={() => setOpen(true)}
             >
               Conversemos
             </button>
