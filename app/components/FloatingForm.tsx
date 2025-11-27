@@ -69,16 +69,25 @@ export default function FloatingForm() {
           />
 
           <select
-            className="w-full border border-gray-300 rounded-xl p-4 text-[15px] placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-black/20 text-[#666464]"
+            className="w-full border border-gray-300 rounded-xl p-4 text-[15px] placeholder-gray-500 bg-white 
+             focus:outline-none focus:ring-2 focus:ring-black/20 text-[#666464]
+             appearance-none pr-12 relative"
             defaultValue=""
             required
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%23666464' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 8 10 12 14 8'/%3E%3C/svg%3E\")",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right 1rem center",
+              backgroundSize: "24px",
+            }}
           >
-            <option value="" disabled className="">
+            <option value="" disabled>
               Elige un plan para cotizar
             </option>
-            <option value="plan1">Plan 1</option>
-            <option value="plan2">Plan 2</option>
-            <option value="plan3">Plan 3</option>
+            <option value="singlePageWebsite">Single Page Website</option>
+            <option value="MultiPageStaticWebsite">Multi Page Static Website</option>
+            <option value="EcommerceWebPersonalizada">Ecommerce Web Personalizada</option>
           </select>
 
           <textarea

@@ -1,3 +1,7 @@
+interface Props {
+  className?: string;
+}
+
 export function MenuIcon() {
   return (
     <svg
