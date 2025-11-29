@@ -6,12 +6,20 @@ import { useForm as useFloatingForm } from "../context/FormContext";
 import { CloseIcon } from "./Icons";
 import { ContactFormData } from "../interfaces/contact-form.interface";
 import { contactFormSchema } from "../schemas/contact.schema";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 
 export default function FloatingForm() {
   const { open, setOpen } = useFloatingForm();
 
   const {
     register,
+    setValue,
     handleSubmit,
     formState: { errors, touchedFields, isValid },
   } = useForm<ContactFormData>({
@@ -118,28 +126,27 @@ export default function FloatingForm() {
           </div>
 
           <div>
-            <select
-              {...register("reason")}
-              className={`
-                ${fieldClass("reason")}
-                bg-white appearance-none pr-12
-              `}
-              defaultValue=""
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%23666464' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 8 10 12 14 8'/%3E%3C/svg%3E\")",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right 1rem center",
-                backgroundSize: "24px",
-              }}
+            <Select
+              onValueChange={(value) =>
+                setValue("reason", value, { shouldValidate: true })
+              }
             >
-              <option value="" disabled>
-                Elige un motivo / plan
-              </option>
-              <option value="SinglePageWebsite">Single Page Website</option>
-              <option value="Multi-PageStaticWebsite">Multi-Page Static Website</option>
-              <option value="Ecommercer/WebPersonalizada">Ecommercer/Web Personalizada</option>
-            </select>
+              <SelectTrigger size="lg" className={fieldClass("reason")}>
+                <SelectValue placeholder="Elige un motivo / plan" />
+              </SelectTrigger>
+
+              <SelectContent>
+                <SelectItem value="SinglePageWebsite">
+                  Single Page Website
+                </SelectItem>
+                <SelectItem value="Multi-PageStaticWebsite">
+                  Multi-Page Static Website
+                </SelectItem>
+                <SelectItem value="Ecommerce/WebPersonalizada">
+                  Ecommerce / Web Personalizada
+                </SelectItem>
+              </SelectContent>
+            </Select>
 
             {errors.reason && (
               <p className="text-red-500 text-sm mt-1">

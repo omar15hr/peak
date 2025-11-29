@@ -31,7 +31,7 @@ export const contactFormSchema = z.object({
       (val) => [
         "SinglePageWebsite",
         "Multi-PageStaticWebsite",
-        "Ecommercer/WebPersonalizada",
+        "Ecommerce/WebPersonalizada",
       ].includes(val),
       "Por favor, selecciona un motivo válido"
     ),
