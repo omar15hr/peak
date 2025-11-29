@@ -28,8 +28,12 @@ export const contactFormSchema = z.object({
     .string()
     .min(1, "Por favor, selecciona un motivo")
     .refine(
-      (val) => ["Residential", "Commercial", "Industrial", "Other"].includes(val),
-      "Please select a valid reason"
+      (val) => [
+        "SinglePageWebsite",
+        "Multi-PageStaticWebsite",
+        "Ecommercer/WebPersonalizada",
+      ].includes(val),
+      "Por favor, selecciona un motivo válido"
     ),
 
   message: z
